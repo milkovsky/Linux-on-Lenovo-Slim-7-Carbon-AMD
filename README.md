@@ -24,7 +24,7 @@ Tested disctribution:
 | Processor | Processor: AMD Ryzen™ 7 5800U-Prozessor | ✔ Yes | All 16 cores were detected in `htop` |
 | Graphics | Integrated AMD Radeon | ✔ Yes | via standard kernel driver |
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
-| Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | Resolution is correctly detected by `xrandr`, 200% scaling was activated by default and looks good. Automatic brightness adjustment works out of the box. Multitouch works out of the box. |
+| Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Works with 5 Ghz networks. Might require some additional setup in other distros (E.g. it did not work on `POP!_OS` from the box) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected |
@@ -43,6 +43,40 @@ Tested disctribution:
 | Suspend |  | ❌ NO | Suspend works. But keyboard does not work after waking up |
 | Hibernate |  | Unknown | todo: test |
 | Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
+
+## Display
+
+Colors look nice. GNOME night mode works fine as well.
+
+### Brightness
+
+Brightness adjustment keys work fine.
+
+Automatic brightness adjustment works out of the box.
+
+### Touchscreen
+
+Multitouch works out of the box even in BIOS.
+
+### Resolution & Scaling
+
+Resolution is correctly detected by `xrandr`, 200% scaling was activated by default and looks good.
+
+Some apps require custom adjustments for proper scaling. A few examples:
+
+Spotify:
+
+- sudo vim /var/lib/snapd/desktop/applications/spotify_spotify.desktop
+- And then you change the Exec directive to include the option:
+  Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2.5 %U
+
+GRUB:
+
+-	Make a backup: sudo cp -a /etc/default/grub /etc/default/grub.bak
+-	Open the configuration: sudo $EDITOR /etc/default/grub
+-	Edit GRUB_GFXMODE entry to suit your resolution e.g. 1024x768
+-	sudo update-grub
+-	Reboot; GRUB will display in the mode you set.
 
 ## Speakers
 
