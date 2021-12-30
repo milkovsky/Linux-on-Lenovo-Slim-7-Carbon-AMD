@@ -28,6 +28,18 @@ Tested disctribution:
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Did not work on `POP!_OS` |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected |
-| Speakers  | Dolby | NO | only 2 speakers work |
+| Speakers  | Dolby | ❌ NO | Only 2 speakers out of 4 work. [See details below](#speakers) |
+| Microphone | | ✔ Yes | out of the box |
+| Webcam | Infrared 720p-HD-Camera | ❌ NO | Only vertical lines are shown in "Cheese" |
+
+## Speakers
+
+Only 2 speakers out of 4 work. THis was also mentioned here: https://www.reddit.com/r/linuxhardware/comments/qxtson/comment/hmae1dy/?utm_source=share&utm_medium=web2x&context=3
+
+Problem research:
+
+- https://www.reddit.com/r/linuxaudio/comments/g1c1jo/2_out_of_4_speakers_dont_play_in_linux_on_my/
+- https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
+- https://imgur.com/a/v86hHVn
 
 WIP....
