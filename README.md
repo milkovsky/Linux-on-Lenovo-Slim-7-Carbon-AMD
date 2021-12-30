@@ -26,7 +26,7 @@ Tested disctribution:
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Works with 5 Ghz networks. Might require some additional setup in other distros (E.g. it did not work on `POP!_OS` from the box) |
+| Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Works with 5 Ghz networks. Might require some [additional setup](https://github.com/lwfinger/rtw89) in other distros (E.g. it did not work on `POP!_OS` from the box) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ Weak | Only 2 speakers out of 4 work. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
@@ -35,11 +35,11 @@ Tested disctribution:
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Todo: charging ports, display, docking. Charging works only via left port, external display only via right one, but it is a known hardware limitation of the laptop |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works |
 | Keyboard |  | ✔ Almost | [see below](#keyboard) for details |
-| Touchpad | | ✔ Yes | touchpad is detected and works in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
+| Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
 | Power button |  | ✔ Yes |  |
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
-| Power management | | ✔ Yes | works, see [below](#power-management) for details |
-| Lid | ACPI-compliant |  ✔ Yes | works as expected, todo: check ACPI logs |
+| Power management | | ✔ Yes | Works, see [below](#power-management) for details |
+| Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
 | Suspend |  | ❌ NO | Suspend works. But keyboard does not work after waking up |
 | Hibernate |  | Unknown | todo: test |
 | Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
