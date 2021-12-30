@@ -39,8 +39,9 @@ Tested disctribution:
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: battery time |
 | Power management | | ✔ Yes | works, see [below](#power-management) for details |
 | Lid | ACPI-compliant |  ✔ Yes | works as expected, todo: check ACPI logs |
-| Suspend |  |  ✔ Yes | Keyboard does not work after waking up |
-| Windows hello |  |  ❌ NO | Does not work out of the box. Todo: research |
+| Suspend |  | ❌ NO | Keyboard does not work after waking up |
+| Hibernate |  | ❌ NO | todo: test |
+| Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
 
 ## Speakers
 
