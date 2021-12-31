@@ -27,20 +27,20 @@ Tested disctribution:
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Works with 5 Ghz networks. Might require some [additional setup](https://github.com/lwfinger/rtw89) in other distros (E.g. it did not work on `POP!_OS` from the box) |
-| Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected |
+| Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ Weak | Only 2 speakers out of 4 work. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Todo: charging ports, display, docking. Charging works only via left port, external display only via right one, but it is a known hardware limitation of the laptop |
-| Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works |
+| Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
 | Keyboard |  | ✔ Almost | [see below](#keyboard) for details |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
 | Power button |  | ✔ Yes |  |
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
 | Power management | | ✔ Yes | Works, see [below](#power-management) for details |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
-| Suspend |  | ❌ NO | Suspend works. But keyboard does not work after waking up |
+| Suspend |  | ❌ NO | Suspend works. But the laptop keyboard does not work after waking up. Although USB keyboard works. Both mouse and touchpad wake up fine. |
 | Hibernate |  | Unknown | todo: test |
 | Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
 
