@@ -26,7 +26,7 @@ Tested disctribution:
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ Yes | Works out of the box on Ubuntu. Works with 5 Ghz networks. Might require some [additional setup](https://github.com/lwfinger/rtw89) in other distros (E.g. it did not work on `POP!_OS` from the box) |
+| Wifi | Realtek | ✔ Requires fixes | See details [below](#wifi) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ Weak | Only 2 speakers out of 4 work. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
@@ -40,7 +40,7 @@ Tested disctribution:
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
 | Power management | | ✔ Yes | Works, see [below](#power-management) for details |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
-| Suspend |  | ❌ NO | Suspend works. But the laptop keyboard does not work after waking up. Although USB keyboard works. Both mouse and touchpad wake up fine. |
+| Suspend |  | ✔ Requires kernel ^5.15 | See details [below](#suspend) |
 | Hibernate |  | Unknown | todo: test |
 | Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
 
@@ -78,6 +78,12 @@ GRUB:
 -	sudo update-grub
 -	Reboot; GRUB will display in the mode you set.
 
+## Wifi
+
+Works out of the box on Ubuntu with kernel 5.13. Works with 5 Ghz networks. Does not work with 5.15 kernel out of the box.
+
+Might require some [additional setup](https://github.com/lwfinger/rtw89) in other distros (E.g. it did not work on `POP!_OS` from the box).
+
 ## Speakers
 
 Only 2 speakers out of 4 work. This problem was also mentioned here: https://www.reddit.com/r/linuxhardware/comments/qxtson/comment/hmae1dy/?utm_source=share&utm_medium=web2x&context=3
@@ -99,3 +105,28 @@ All the 3 power modes in GNOME do change BIOS power modes settings.
 todo: test power modes
 
 todo: check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
+
+## Suspend
+
+Suspend works. Requires [kernel 5.15 update](#kernel-update-to-515) for stable work, as it contains an important laptop suspend/resume fix for various AMD models.
+5.13 kernel issues: the laptop keyboard does not work after waking up, Although both USB keyboard, mouse and touchpad wake up fine.
+
+### Kernel update to 5.15
+
+```
+cd /tmp/
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-headers-5.15.0-051500_5.15.0-051500.202110312130_all.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-headers-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-image-unsigned-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-modules-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
+
+sudo dpkg -i *.deb
+```
+
+Source: https://ubuntuhandbook.org/index.php/2021/11/linux-kernel-5-15-out/)
+
+YOu might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to-sign-things-for-secure-boot) afterwards.
