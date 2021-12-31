@@ -68,7 +68,7 @@ Spotify:
 
 - sudo vim /var/lib/snapd/desktop/applications/spotify_spotify.desktop
 - And then you change the Exec directive to include the option:
-  Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2.5 %U
+  Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2 %U
 
 GRUB:
 
