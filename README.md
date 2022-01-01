@@ -1,6 +1,6 @@
 # Linux on Lenovo Yoga/IdeaPad Slim 7 Carbon (AMD)
 
-> Inspired by https://github.com/nekr0z/linux-on-huawei-matebook-13-2019
+> Inspired by https://github.com/nekr0z/linux-on-huawei-matebook-13-2019 and https://github.com/jrandiny/yoga-slim7-ubuntu
 
 ![image](https://user-images.githubusercontent.com/1665580/147853477-aecb6d4a-220d-4d68-ab83-a40508e09da4.png)
 
@@ -135,18 +135,25 @@ Research results:
 - This might fix the issue https://www.reddit.com/r/linuxhardware/comments/miults/how_to_control_oled_brightness_in_wayland/. 
 Let's wait for the 22.04 LTS Ubuntu release first.
 
+## Battery
+
+Tested ballanced mode for now. Battery life is approximately 5 hours.
+
+You can find a separate [page with additional tools for battery performance improvements](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/blob/main/additional-features.md#battery-optimization).
+
 ## Power management
 
 All the 3 power modes in GNOME do change BIOS power modes settings.
 
 todo: test power modes
 
-todo: check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
-
 ## Suspend
 
 Suspend works. Requires [kernel 5.15 update](#kernel-update-to-515) for stable work, as it contains an important laptop suspend/resume fix for various AMD models.
 5.13 kernel issues: the laptop keyboard does not work after waking up, Although both USB keyboard, mouse and touchpad wake up fine.
+
+
+todo: check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
 
 ### Kernel update to 5.15
 
