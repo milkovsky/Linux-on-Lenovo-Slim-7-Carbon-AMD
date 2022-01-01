@@ -1,4 +1,4 @@
-# Links Linux support on other laptops
+# Linux support on other laptops
 
 - [Linux on Huawei MateBook 13 (2019)](https://github.com/milkovsky/linux-on-huawei-matebook-13-2019/blob/master/README.md)
 - [GNU/Linux on Huawei MateBook X (2017)](https://github.com/lidel/linux-on-huawei-matebook-x-2017)
