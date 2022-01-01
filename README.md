@@ -30,11 +30,11 @@ Tested disctribution:
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Requires additional steps | See details [below](#wifi) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
-| Speakers  | Dolby Vision Atmos Speaker System | ❌ Weak | Only 2 speakers out of 4 work. [See details below](#speakers) |
+| Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
-| Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Todo: charging ports, display, docking. Charging works only via left port, external display only via right one, but it is a known hardware limitation of the laptop |
+| Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
 | Keyboard |  | ✔ Almost | [see below](#keyboard) for details |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
@@ -150,4 +150,27 @@ You might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to
 
 ## Face recognition
 
-It works with [Howdy](https://github.com/EmixamPP/linux-enable-ir-emitter) after enabling the IR-sensor with this: https://github.com/EmixamPP/linux-enable-ir-emitter
+It works with [Howdy](https://github.com/boltgolt/howdy) after enabling the IR-sensor with this: https://github.com/EmixamPP/linux-enable-ir-emitter
+
+[Setup instructions](https://rcarrillo.dev/enabling-face-authentication-on-linux-with-howdy/):
+
+Install https://github.com/EmixamPP/linux-enable-ir-emitter:
+
+```
+git clone https://github.com/EmixamPP/linux-enable-ir-emitter.git
+cd linux-enable-ir-emitter
+sudo bash installer.sh install
+```
+`sudo linux-enable-ir-emitter` configure look at the ir emitter and answer no on the 1st question and yes on the 2nd question.
+
+Install howdy:
+
+```
+sudo add-apt-repository ppa:boltgolt/howdy
+sudo apt update
+sudo apt install howdy
+```
+
+`sudo howdy config`, set `device_path` to `/dev/video0`.
+`sudo howdy add` follow the instructions
+Reboot.
