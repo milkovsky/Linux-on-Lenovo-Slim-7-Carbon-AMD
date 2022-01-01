@@ -64,13 +64,31 @@ Resolution is correctly detected by `xrandr`, 200% scaling was activated by defa
 
 Some apps require custom adjustments for proper scaling. A few examples:
 
-Spotify:
+#### Spotify
 
 - sudo vim /var/lib/snapd/desktop/applications/spotify_spotify.desktop
 - And then you change the Exec directive to include the option:
   Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2 %U
 
-GRUB:
+#### Steam
+
+Create a scaled launcher:
+
+- `vim .local/share/applications/SteamScaled.desktop`
+- Paste next text:
+
+```
+[Desktop Entry]
+Name=Steam Scaled
+Exec=env GDK_SCALE=2 steam
+Type=Application
+StartupNotify=true
+Icon=steam
+StartupWMClass=steam
+Name[en_US]=Steam Scaled
+```
+
+#### GRUB
 
 -	Make a backup: sudo cp -a /etc/default/grub /etc/default/grub.bak
 -	Open the configuration: sudo $EDITOR /etc/default/grub
