@@ -1,6 +1,6 @@
 # Linux on Lenovo Yoga/IdeaPad Slim 7 Carbon (AMD)
 
-> Inspired by https://github.com/nekr0z/linux-on-huawei-matebook-13-2019 and https://github.com/jrandiny/yoga-slim7-ubuntu
+> Inspired by [similar researches for other laptops](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/blob/main/links.md)
 
 ![image](https://user-images.githubusercontent.com/1665580/147853477-aecb6d4a-220d-4d68-ab83-a40508e09da4.png)
 
