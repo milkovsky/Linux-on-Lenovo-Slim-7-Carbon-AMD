@@ -28,7 +28,7 @@ Tested disctribution:
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ Requires additional steps | See details [below](#wifi) |
+| Wifi | Realtek | ✔ Requires additional setup | See details [below](#wifi) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
@@ -36,14 +36,14 @@ Tested disctribution:
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
-| Keyboard |  | ✔ Almost | [see below](#keyboard) for details |
+| Keyboard |  | ⚠️ Open issues | [see below](#keyboard) for details |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
 | Power button |  | ✔ Yes |  |
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
 | Power management | | ✔ Yes | Works, see [below](#power-management) for details |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
 | Suspend |  | ✔ Requires kernel ^5.15 | See details [below](#suspend) |
-| Hibernate |  | Unknown | todo: test |
+| Hibernate |  | ⚠️ Unknown | todo: test |
 | Face recognition |  | ✔ Requires additional setup | See details [below](#face-recognition) |
 
 ## Display
