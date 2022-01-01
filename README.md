@@ -17,7 +17,7 @@ Tested specifications:
 Tested disctribution:
 
 - Ubuntu 21.10
-- Kernel: 5.13.0.22
+- Kernel: 5.13.0.22, 5.15.0-051500-generic
 
 ## Linux support
 
