@@ -109,7 +109,10 @@ Mostly works. Some function buttons do not work:
 F9 (settings), F11, Star S. All the other functions including Fn lock, home, end, pg up, pg down work out of the box. 3 levels of keyboard light work as well.
 
 **kernel 5.15**
-in addition to issues in the kernel 5.13, brightness buttons F5, F6 do not work.
+in addition to issues in the kernel 5.13, brightness buttons F5, F6 do not work. Todo: fix this.
+
+Research results: All the common fixes do not work. THis might fix the issue https://www.reddit.com/r/linuxhardware/comments/miults/how_to_control_oled_brightness_in_wayland/. Let's wait for the 22.04 LTS Ubuntu release first.
+
 ## Power management
 
 All the 3 power modes in GNOME do change BIOS power modes settings.
