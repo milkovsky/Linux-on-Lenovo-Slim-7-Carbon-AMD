@@ -26,7 +26,7 @@ Tested disctribution:
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ Requires fixes | See details [below](#wifi) |
+| Wifi | Realtek | ✔ Requires additional steps | See details [below](#wifi) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ Weak | Only 2 speakers out of 4 work. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
@@ -80,9 +80,15 @@ GRUB:
 
 ## Wifi
 
-Works out of the box on Ubuntu with kernel 5.13. Works with 5 Ghz networks. Does not work with 5.15 kernel out of the box.
+Works as expected after some setup manipulations. Works with 5 Ghz networks.
 
-Might require some [additional setup](https://github.com/lwfinger/rtw89) in other distros (E.g. it did not work on `POP!_OS` from the box).
+**kernel 5.13**
+
+Works out of the box on Ubuntu 21.10 with kernel 5.13, as it already contains the required API changes.
+
+**kernel 5.15**
+
+Does not work with 5.15 kernel out of the box. Follow carefully the [additional setup instructions](https://github.com/lwfinger/rtw89) to fix the wifi module.
 
 ## Speakers
 
