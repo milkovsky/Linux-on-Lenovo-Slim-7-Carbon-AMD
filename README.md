@@ -44,7 +44,7 @@ Tested disctribution:
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
 | Suspend |  | ✔ Requires kernel ^5.15 | See details [below](#suspend) |
 | Hibernate |  | Unknown | todo: test |
-| Windows hello |  | ❌ NO | Does not work out of the box. Todo: research |
+| Face recognition |  | ✔ Requires additional setup | See details [below](#face-recognition) |
 
 ## Display
 
@@ -147,3 +147,7 @@ sudo dpkg -i *.deb
 Source: https://ubuntuhandbook.org/index.php/2021/11/linux-kernel-5-15-out/)
 
 You might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to-sign-things-for-secure-boot) afterwards.
+
+## Face recognition
+
+It works with [Howdy](https://github.com/EmixamPP/linux-enable-ir-emitter) after enabling the IR-sensor with this: https://github.com/EmixamPP/linux-enable-ir-emitter
