@@ -144,4 +144,4 @@ sudo dpkg -i *.deb
 
 Source: https://ubuntuhandbook.org/index.php/2021/11/linux-kernel-5-15-out/)
 
-YOu might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to-sign-things-for-secure-boot) afterwards.
+You might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to-sign-things-for-secure-boot) afterwards.
