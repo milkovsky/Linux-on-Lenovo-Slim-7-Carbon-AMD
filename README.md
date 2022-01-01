@@ -96,8 +96,14 @@ Problem research:
 
 ## Keyboard
 
-Mostly works. Some function buttons do not work: F9 (settings), F11, Star S. All the other functions including Fn lock, home, end, pg up, pg down work out of the box. 3 levels of keyboard light work as well.
+Mostly works. Some function buttons do not work: 
 
+**kernel 5.13**
+
+F9 (settings), F11, Star S. All the other functions including Fn lock, home, end, pg up, pg down work out of the box. 3 levels of keyboard light work as well.
+
+**kernel 5.15**
+in addition to issues in the kernel 5.13, brightness buttons F5, F6 do not work.
 ## Power management
 
 All the 3 power modes in GNOME do change BIOS power modes settings.
