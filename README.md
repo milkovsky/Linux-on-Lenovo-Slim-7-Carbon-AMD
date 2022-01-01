@@ -52,9 +52,7 @@ Colors look nice. GNOME night mode works fine as well.
 
 ### Brightness
 
-Brightness adjustment keys work fine.
-
-Automatic brightness adjustment works out of the box.
+Brightness adjustment keys work fine with kernel 5.13. Kernel 5.15 has issues with adjustment keys, [see below](#keyboard) for details.
 
 ### Touchscreen
 
@@ -113,7 +111,11 @@ F9 (settings), F11, Star S. All the other functions including Fn lock, home, end
 **kernel 5.15**
 in addition to issues in the kernel 5.13, brightness buttons F5, F6 do not work. Todo: fix this.
 
-Research results: All the common fixes do not work. THis might fix the issue https://www.reddit.com/r/linuxhardware/comments/miults/how_to_control_oled_brightness_in_wayland/. Let's wait for the 22.04 LTS Ubuntu release first.
+Research results:
+- All the common fixes do not work.
+- https://unix.stackexchange.com/questions/616371/backlight-control-not-working-on-lenovo-ideapad-gaming-3-with-renoir-amdgpu
+- This might fix the issue https://www.reddit.com/r/linuxhardware/comments/miults/how_to_control_oled_brightness_in_wayland/. 
+Let's wait for the 22.04 LTS Ubuntu release first.
 
 ## Power management
 
