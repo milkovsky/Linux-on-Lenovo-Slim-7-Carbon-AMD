@@ -150,10 +150,13 @@ todo: test power modes
 ## Suspend
 
 Suspend works, but it is buggy. Often laptop is not responsive after weaking up. Anyway this function requires [kernel 5.15 update](#kernel-update-to-515) for stable work, as it contains an important laptop suspend/resume fix for various AMD models.
+
 5.13 kernel issues: the laptop keyboard does not work after waking up, Although both USB keyboard, mouse and touchpad wake up fine.
 
-todo: fix "laptop is not responsive after weaking up:.
-todo: check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
+todo:
+
+- fix "laptop is not responsive after weaking up:.
+- check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
 
 ### Kernel update to 5.15
 
