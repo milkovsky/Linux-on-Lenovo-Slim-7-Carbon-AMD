@@ -117,6 +117,7 @@ Problem research:
 - https://www.reddit.com/r/linuxaudio/comments/g1c1jo/2_out_of_4_speakers_dont_play_in_linux_on_my/
 - https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
 - https://imgur.com/a/v86hHVn
+- https://bugzilla.kernel.org/show_bug.cgi?id=208555#c547
 
 ## Keyboard
 
