@@ -114,6 +114,13 @@ Only 2 speakers out of 4 work. This problem was also mentioned here: https://www
 
 Problem research:
 
+`alsa-info` output: http://alsa-project.org/db/?f=045c0b1e6b2f41b44c1a3bc145617ce60a6f756a
+
+Kernel bug reports:
+- https://bugzilla.kernel.org/show_bug.cgi?id=215632
+- https://bugzilla.kernel.org/show_bug.cgi?id=208555
+
+Other links:
 - https://www.reddit.com/r/linuxaudio/comments/g1c1jo/2_out_of_4_speakers_dont_play_in_linux_on_my/
 - https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
 - https://imgur.com/a/v86hHVn
