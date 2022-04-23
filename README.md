@@ -44,7 +44,7 @@ Tested disctribution:
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
 | Power management | | ✔ Yes | Works, see [below](#power-management) for details |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
-| Suspend |  | ⚠️ Buggy. Requires kernel ^5.15 | See details [below](#suspend) |
+| Suspend |  | ✔ Yes | Works stable in ubuntu 22.04 LTS (5.15.0-25-generic). In supendend mode laptop lost 10% battery in 1,5 days. |
 | Hibernate |  | ⚠️ Unknown | todo: test |
 | Face recognition |  | ✔ Requires additional setup | See details [below](#face-recognition) |
 
@@ -156,37 +156,6 @@ You can find a separate [page with additional tools for battery performance impr
 All the 3 power modes in GNOME do change BIOS power modes settings.
 
 todo: test power modes
-
-## Suspend
-
-Suspend works, but it is buggy. Often laptop is not responsive after weaking up. Anyway this function requires [kernel 5.15 update](#kernel-update-to-515) for stable work, as it contains an important laptop suspend/resume fix for various AMD models.
-
-5.13 kernel issues: the laptop keyboard does not work after waking up, Although both USB keyboard, mouse and touchpad wake up fine.
-
-todo:
-
-- fix "laptop is not responsive after weaking up:.
-- check this: Suspend to S3 state works out of the box. For hibernation to work `Secure boot` must be disabled in BIOS. Laptop seems to wake up without any issues.
-
-### Kernel update to 5.15
-
-```
-cd /tmp/
-
-wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-headers-5.15.0-051500_5.15.0-051500.202110312130_all.deb
-
-wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-headers-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
-
-wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-image-unsigned-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
-
-wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15/amd64/linux-modules-5.15.0-051500-generic_5.15.0-051500.202110312130_amd64.deb
-
-sudo dpkg -i *.deb
-```
-
-Source: https://ubuntuhandbook.org/index.php/2021/11/linux-kernel-5-15-out/)
-
-You might want to [sign the core for secure boot](https://ubuntu.com/blog/how-to-sign-things-for-secure-boot) afterwards.
 
 ## Face recognition
 
