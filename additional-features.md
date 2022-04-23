@@ -21,7 +21,7 @@ On Lenovo Vantage (the Windows 10 app) there's "Battery Conservation Mode" featu
 
 ```
 # Turn on
-echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mod
+echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 # Turn off
 echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 ```
