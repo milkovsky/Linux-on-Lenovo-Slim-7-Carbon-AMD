@@ -1,4 +1,6 @@
-# Linux on Lenovo Yoga/IdeaPad Slim 7 Carbon (AMD)
+# Linux on Lenovo Yoga Slim 7 Carbon Gen 6 (14" AMD)
+
+US name: Lenovo Yoga IdeaPad 7 Carbon Gen 6 (14" AMD)
 
 > Inspired by [similar researches for other laptops](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/blob/main/links.md).
 
