@@ -16,10 +16,13 @@ Tested specifications:
 - Screen: 14.0" 2.8K (2880x1800) OLED, Multitouch
 - Graffic card: integrated AMD
 
-Tested disctribution:
+Tested disctributions, kernel versions:
 
 - Ubuntu 21.10
-- Kernel: 5.13.0.22, 5.15.0-051500-generic
+- Ubuntu 22.04
+- POP_OS 22.04
+- Fedora 35
+- Kernel: 5.13.0.22, 5.15
 
 ## Linux support
 
