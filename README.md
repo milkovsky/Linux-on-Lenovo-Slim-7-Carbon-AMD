@@ -24,7 +24,7 @@ Tested disctributions, kernel versions:
 - Ubuntu 22.04
 - POP_OS 22.04
 - Fedora 35
-- Kernel: 5.13.0.22, 5.15
+- Kernel: 5.13.0.22, 5.15, 5.16
 
 ## Linux support
 
@@ -35,7 +35,7 @@ Tested disctributions, kernel versions:
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ | Requires additional setup for kernel 5.13 and earlier. See details [below](#wifi) |
+| Wifi | Realtek | ✔ Yes | Requires additional setup for some kernel versions. See details [below](#wifi) |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details below](#speakers) |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
@@ -43,7 +43,7 @@ Tested disctributions, kernel versions:
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
-| Keyboard |  | ⚠️ Open issues | [see below](#keyboard) for details |
+| Keyboard |  | ⚠️ Minor issues | [see below](#keyboard) for details |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
 | Power button |  | ✔ Yes |  |
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
@@ -105,7 +105,7 @@ Name[en_US]=Steam Scaled
 
 ## Wifi
 
-Works as expected after some setup manipulations. Works with 5 Ghz networks.
+Works as expected in Ubuntu 22.04, POP_OS 22.04. Works with 5 Ghz networks. For other versions some setup manipulations were required.
 
 **kernel 5.13**
 
@@ -117,7 +117,7 @@ Does not work with 5.15 kernel out of the box. Follow carefully the [additional 
 
 ## Speakers
 
-Only 2 speakers out of 4 work. This problem was also mentioned here: https://www.reddit.com/r/linuxhardware/comments/qxtson/comment/hmae1dy/?utm_source=share&utm_medium=web2x&context=3
+Only 2 speakers out of 4 work. Open issue: https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/issues/2
 
 Problem research:
 
@@ -132,6 +132,7 @@ Other links:
 - https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
 - https://imgur.com/a/v86hHVn
 - https://bugzilla.kernel.org/show_bug.cgi?id=208555#c547
+- https://www.reddit.com/r/linuxhardware/comments/qxtson/comment/hmae1dy/?utm_source=share&utm_medium=web2x&context=3
 
 ## Keyboard
 
