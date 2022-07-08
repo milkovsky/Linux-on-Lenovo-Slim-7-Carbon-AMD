@@ -52,6 +52,7 @@ Tested disctributions, kernel versions:
 | Suspend |  | ✔ Yes | Works stable in ubuntu 22.04 LTS (5.15.0-25-generic). In supendend mode laptop lost 10% battery in 1,5 days. |
 | Hibernate |  | ⚠️ Unknown | todo: test |
 | Face recognition |  | ✔ Requires additional setup | See details [below](#face-recognition) |
+| AMD P-State | | ✔ Requires additional setup | See details [below](#amd-p-state) |
 
 ## Display
 
@@ -176,3 +177,11 @@ sudo apt install howdy
 `sudo howdy config`, set `device_path` to `/dev/video0`.
 `sudo howdy add` follow the instructions
 Reboot.
+
+## AMD P-State
+
+We can use AMD P-State with kernel 5.17+, as it is written in this [ArchWiki page (about a similar model)](https://wiki.archlinux.org/title/Lenovo_IdeaPad_5_Pro_14ACN6#AMD_P-State).
+
+### Contribution
+
+In case you have some additional information about various Linux-related topics on this laptop, feel free to [open an issue](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/issues/new) and/or [create a Pull-request](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/pulls).
