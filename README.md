@@ -186,6 +186,6 @@ We can use AMD P-State with kernel 5.17+, as it is written in this [ArchWiki pag
 
 ---
 
-# Contribution
+## Contribution
 
 In case you have some additional information about various Linux-related topics on this laptop, feel free to [open an issue](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/issues/new) and/or [create a Pull-request](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/pulls).
