@@ -43,7 +43,7 @@ Tested disctributions, kernel versions:
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
-| Ports | 3 × USB-C, Mini-jack | ✔ Yes | Charging works over all the ports. Charging "flash" symbol appears in a few minutes after plugging in. Charging works only via left port. |
+| Ports | 3 × USB-C, Mini-jack | ✔ Yes | All the ports work. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
 | Keyboard |  | ⚠️ Minor issues | [see below](#keyboard) for details |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
