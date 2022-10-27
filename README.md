@@ -35,26 +35,26 @@ Tested disctributions, kernel versions:
 | Processor | Processor: AMD Ryzen™ 7 5800U-Prozessor | ✔ Yes | All 16 cores were detected in `htop` |
 | Graphics | Integrated AMD Radeon | ✔ Yes | via standard kernel driver |
 | RAM | 16 GB LPDDR4X 4266MHz | ✔ Yes | 13,5G were recognized in `htop` |
-| Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [below](#display) for details |
+| Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [display details](#display) below. |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
-| Wifi | Realtek | ✔ Yes | Requires additional setup for some kernel versions. See details [below](#wifi) |
+| Wifi | Realtek | ✔ Yes | Requires additional setup for some kernel versions. See [wifi details](#wifi) below. |
 | Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
-| Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details below](#speakers) |
+| Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details about Speakers](#speakers) below. |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | All the ports work. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
-| Keyboard |  | ⚠️ Minor issues | [see below](#keyboard) for details |
+| Keyboard |  | ⚠️ Minor issues | see [Keyboard details](#keyboard) below |
 | Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work. |
 | Power button |  | ✔ Yes |  |
-| Battery | 4 Cell, 61 Wh | ✔ Yes | Todo: test battery life |
-| Power management | | ✔ Yes | Works, see [below](#power-management) for details |
+| Battery | 4 Cell, 61 Wh | ✔ Yes | Battery life is approximately 5 hours during a regular usaage in ballanced mode. See [more details about bettery](#battery) below. |
+| Power management | | ✔ Yes | Works, see [more details about power management](#power-management) below. |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
 | Suspend |  | ✔ Yes | Works stable in ubuntu 22.04 LTS (5.15.0-25-generic). In supendend mode laptop lost 10% battery in 1,5 days. |
 | Hibernate |  | ⚠️ Unknown | todo: test |
-| Face recognition |  | ✔ Requires additional setup | See details [below](#face-recognition) |
-| AMD P-State | | ✔ Requires additional setup | See details [below](#amd-p-state) |
+| Face recognition |  | ✔ Requires additional setup | See [details about face recognition](#face-recognition) below. |
+| AMD P-State | | ✔ Requires additional setup | See [details about AMD P-State](#amd-p-state) below. |
 
 ## Display
 
@@ -62,7 +62,7 @@ Colors look nice. GNOME night mode works fine as well.
 
 ### Brightness
 
-Brightness adjustment keys work fine with kernel 5.13. Kernel 5.15 has issues with adjustment keys, [see below](#keyboard) for details.
+Brightness adjustment keys work fine with kernel 5.13. Kernel 5.15 has issues with adjustment keys, see [keyboard details](#keyboard) below.
 
 ### Touchscreen
 
