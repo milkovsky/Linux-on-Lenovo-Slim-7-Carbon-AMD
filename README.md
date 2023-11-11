@@ -46,7 +46,7 @@ Tested disctributions, kernel versions:
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | All the ports work. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
 | Keyboard |  | ⚠️ Minor issues | see [Keyboard details](#keyboard) below |
-| Touchpad | | ⚠️ Only the US version | EU/Yoga variant has no touchpad. Otherwise, all features work on the US variant. |
+| Touchpad | | ✔ Yes | Touchpad is an optional purchase. It works as intended and is fully functional. |
 | Power button |  | ✔ Yes |  |
 | Battery | 4 Cell, 61 Wh | ✔ Yes | Battery life is approximately 5 hours during a regular usaage in ballanced mode. See [more details about bettery](#battery) below. |
 | Power management | | ✔ Yes | Works, see [more details about power management](#power-management) below. |
