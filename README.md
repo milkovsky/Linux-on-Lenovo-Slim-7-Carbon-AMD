@@ -8,7 +8,7 @@ US name: Lenovo Yoga IdeaPad 7 Carbon Gen 6 (14" AMD)
 
 > © lenovo.com
 
-The laptop was released in Nevember 2021. Full name in Europe "[Lenovo Yoga Slim 7 Carbon Gen 6 (14" AMD)](https://www.lenovo.com/de/de/laptops/yoga/yoga-slim-series/Yoga-Slim-7-Carbon-Gen-6-14-inch-AMD/p/LEN101Y0006)", "Lenovo IdeaPad Slim 7 Carbon Gen 6 (14" AMD)".
+The laptop was released in Nevember 2021. Full name in Europe is "[Lenovo Yoga Slim 7 Carbon Gen 6 (14" AMD)](https://www.lenovo.com/de/de/laptops/yoga/yoga-slim-series/Yoga-Slim-7-Carbon-Gen-6-14-inch-AMD/p/LEN101Y0006)", and the US version is called "Lenovo IdeaPad Slim 7 Carbon Gen 6 (14" AMD)".
 
 psref: https://psref.lenovo.com/Detail/Yoga/Yoga_Slim_7_Carbon_14ACN6?M=82L0005RMX
 
@@ -18,15 +18,16 @@ Tested specifications:
 - RAM: 16 GB LPDDR4X 4266MHz
 - 1 TB M.2 2280 SSD
 - Screen: 14.0" 2.8K (2880x1800) OLED, Multitouch
-- Graffic card: integrated AMD
+- Graphic chip: Integrated AMD Vega 8 with up to 2 GB RAM. 
 
-Tested disctributions, kernel versions:
+Tested distributions, and kernel versions:
 
 - Ubuntu 21.10
 - Ubuntu 22.04
 - POP_OS 22.04
 - Fedora 35
-- Kernel: 5.13.0.22, 5.15, 5.16
+- NixOS 23.05
+- Kernel: 5.13.0.22, 5.15, 5.16, 6.1, 6.6
 
 ## Linux support
 
@@ -38,7 +39,7 @@ Tested disctributions, kernel versions:
 | Display | 14.0" 2.8K (2880x1800) OLED, Multitouch | ✔ Yes | see [display details](#display) below. |
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Yes | Requires additional setup for some kernel versions. See [wifi details](#wifi) below. |
-| Bluetooth | Bluetooth 5.0| ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
+| Bluetooth | Bluetooth 5.2 | ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
 | Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details about Speakers](#speakers) below. |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
@@ -46,9 +47,9 @@ Tested disctributions, kernel versions:
 | Ports | 3 × USB-C, Mini-jack | ✔ Yes | All the ports work. Charging works only via left port. |
 | Graphic Dongle | USB-Typ-C to USB-Typ-A-/HDMI-/VGA | ✔ Yes | Works. HDMI monitor works, USB keyboard works. |
 | Keyboard |  | ⚠️ Minor issues | see [Keyboard details](#keyboard) below |
-| Touchpad | | ✔ Yes | Touchpad is an optional purchase. It works as intended and is fully functional. |
+| Touchpad | | ✔ Yes | Touchpad is detected and works good in GNOME and KDE. Left, right clicks, 2-finger scrolling, 2-finger zooming, 3-finger workspaces switching work.
 | Power button |  | ✔ Yes |  |
-| Battery | 4 Cell, 61 Wh | ✔ Yes | Battery life is approximately 5 hours during a regular usaage in ballanced mode. See [more details about bettery](#battery) below. |
+| Battery | 4 Cell, 61 Wh | ✔ Yes | Battery life is approximately 5 hours during a regular usaage in balanced mode. See [more details about the battery](#battery) below. |
 | Power management | | ✔ Yes | Works, see [more details about power management](#power-management) below. |
 | Lid | ACPI-compliant |  ✔ Yes | Works as expected, todo: check ACPI logs |
 | Suspend |  | ✔ Yes | Works stable in ubuntu 22.04 LTS (5.15.0-25-generic). In supendend mode laptop lost 10% battery in 1,5 days. |
@@ -58,7 +59,8 @@ Tested disctributions, kernel versions:
 
 ## Display
 
-Colors look nice. GNOME night mode works fine as well.
+Colors look nice. GNOME and KDE night mode works fine as well. Some distros may require manual setup for the scaling.
+A 90 hz mode can be optionally enabled in the KDE systemsettings under Display Configuration. 
 
 ### Brightness
 
@@ -66,8 +68,8 @@ Brightness adjustment keys work fine with kernel 5.13. Kernel 5.15 has issues wi
 
 ### Touchscreen
 
-Multitouch works out of the box even in BIOS.
-This is only a feature in the US version, not the European one. 
+The touchscreen is an optional upgrade, that not all units come with. 
+Multitouch works out of the box, even in UEFI.
 
 ### Resolution & Scaling
 
@@ -83,10 +85,20 @@ Some apps require custom adjustments for proper scaling. A few examples:
 
 #### Steam
 
-Create a scaled launcher:
+Steam has an ongoing issue, that prevents it to start with an appropriately applied scale on high resulution displays. 
+This is a known regression for a long time, and here is how you can circumvent that by creating a custom launcher. 
 
-- `vim .local/share/applications/SteamScaled.desktop`
-- Paste next text:
+On **KDE**: 
+
+Right click on the menu, and select *Edit Applications* and then find the Steam launcher. 
+Add the following line to the field _Commandline Options_: -forcedesktopscaling 1.75 %U
+
+![Screenshot_20231112_143708](https://github.com/ShalokShalom/Linux-on-Lenovo-Slim-7-Carbon-AMD/assets/6344099/715f91f0-a664-4cb6-93f6-25d19f7a03b8)
+
+On other systems, you can do this by creating a desktop file:
+
+- `$EDITOR .local/share/applications/SteamScaled.desktop`
+- Paste in the following text:
 
 ```
 [Desktop Entry]
@@ -99,11 +111,13 @@ StartupWMClass=steam
 Name[en_US]=Steam Scaled
 ```
 
+Safe and exit.
+
 #### GRUB
 
 -	Make a backup: sudo cp -a /etc/default/grub /etc/default/grub.bak
 -	Open the configuration: sudo $EDITOR /etc/default/grub
--	Edit GRUB_GFXMODE entry to suit your resolution e.g. 1024x768
+-	Edit GRUB_GFXMODE entry to suit your resolution e.g. 2880x1800
 -	sudo update-grub
 -	Reboot; GRUB will display in the mode you set.
 
@@ -169,7 +183,7 @@ sudo bash installer.sh install
 ```
 `sudo linux-enable-ir-emitter` configure look at the ir emitter and answer no on the 1st question and yes on the 2nd question.
 
-Install howdy:
+Install howdy on Ubuntu:
 
 ```
 sudo add-apt-repository ppa:boltgolt/howdy
@@ -186,7 +200,8 @@ Reboot.
 AMD P-State is enabled by default for all Linux kernels starting with version 6.3 and you can manually enable it with kernel 5.17+, as it is written in this [ArchWiki page (about a similar model)](https://wiki.archlinux.org/title/Lenovo_IdeaPad_5_Pro_14ACN6#AMD_P-State).
 
 NOTE:
-OEM kernel in Ubuntu has enabled driver by default.
+
+The OEM kernel in older Ubuntu version has this setting also enabled by default.
 ```
 sudo apt install linux-image-5.17.0-1012-oem 
 ```
