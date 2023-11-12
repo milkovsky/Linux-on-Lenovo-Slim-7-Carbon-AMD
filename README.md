@@ -85,7 +85,7 @@ Some apps require custom adjustments for proper scaling. A few examples:
 
 #### Steam
 
-Steam has an ongoing issue, that prevents it to start with an appropriately applied scale on high resulution displays. 
+Steam has an (ongoing issue)[https://github.com/ValveSoftware/steam-for-linux/issues/9209], that prevents it to start with an appropriately applied scale on high resolution displays. 
 This is a known regression for a long time, and here is how you can circumvent that by creating a custom launcher. 
 
 On **KDE**: 
