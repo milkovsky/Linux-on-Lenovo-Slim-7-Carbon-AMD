@@ -146,6 +146,7 @@ Kernel bug reports:
 - https://bugzilla.kernel.org/show_bug.cgi?id=208555
 
 Other links:
+- https://forums.lenovo.com/t5/Ubuntu/Yoga-Slim-7-Carbon-14ACN6-Linux-Audio/m-p/5158856
 - https://www.reddit.com/r/linuxaudio/comments/g1c1jo/2_out_of_4_speakers_dont_play_in_linux_on_my/
 - https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
 - https://imgur.com/a/v86hHVn
