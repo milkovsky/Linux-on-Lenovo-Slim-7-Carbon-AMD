@@ -40,7 +40,7 @@ Tested distributions, and kernel versions:
 | Storage | 1 TB M.2 2280 SSD | ✔ Yes | Via standard kernel driver |
 | Wifi | Realtek | ✔ Yes | Requires additional setup for some kernel versions. See [wifi details](#wifi) below. |
 | Bluetooth | Bluetooth 5.2 | ✔ Yes | Works as expected. Bluetooth mouse is recognized and works as expected. |
-| Speakers  | Dolby Vision Atmos Speaker System | ❌ only 2 speakers | Only 2 speakers out of 4 work out of the box. [See details about Speakers](#speakers) below. |
+| Speakers  | Dolby Vision Atmos Speaker System | ✔ Yes | If Only 2 speakers out of 4 work, there is a fix. [See details about Speaker issues](https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/issues/2). |
 | Microphone | | ✔ Yes | Out of the box. todo: test if all mics work |
 | Webcam | Infrared 720p-HD-Camera | ✔ Yes | Works out of the box. Note: Sometimes only vertical lines are shown. To fix it turn the camera off and on with the killswitch. |
 | Webcam killswitch | | ✔ Yes | Works out of the box. |
@@ -132,26 +132,6 @@ Works out of the box on Ubuntu 21.10 with kernel 5.13, as it already contains th
 **kernel 5.15**
 
 Does not work with 5.15 kernel out of the box. Follow carefully the [additional setup instructions](https://github.com/lwfinger/rtw89) to fix the wifi module.
-
-## Speakers
-
-Only 2 speakers out of 4 work. Open issue: https://github.com/milkovsky/Linux-on-Lenovo-Slim-7-Carbon-AMD/issues/2
-
-Problem research:
-
-`alsa-info` output: http://alsa-project.org/db/?f=045c0b1e6b2f41b44c1a3bc145617ce60a6f756a
-
-Kernel bug reports:
-- https://bugzilla.kernel.org/show_bug.cgi?id=215632
-- https://bugzilla.kernel.org/show_bug.cgi?id=208555
-
-Other links:
-- https://forums.lenovo.com/t5/Ubuntu/Yoga-Slim-7-Carbon-14ACN6-Linux-Audio/m-p/5158856
-- https://www.reddit.com/r/linuxaudio/comments/g1c1jo/2_out_of_4_speakers_dont_play_in_linux_on_my/
-- https://github.com/hg8/arch-matebook-x-pro-2019/blob/master/guide-fix-matebook-x-pro-speakers-linux.md
-- https://imgur.com/a/v86hHVn
-- https://bugzilla.kernel.org/show_bug.cgi?id=208555#c547
-- https://www.reddit.com/r/linuxhardware/comments/qxtson/comment/hmae1dy/?utm_source=share&utm_medium=web2x&context=3
 
 ## Keyboard
 
